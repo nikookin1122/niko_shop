@@ -37,15 +37,15 @@ function renderProduct(products){
        
         container.appendChild(div)
 
-        const buttons = container.querySelectorAll("button[data-id]")
-        buttons.forEach(button => {
-            button.addEventListener("click", () => {
-
-                const id = parseInt(button.dataset.id)
-                addToCart(id)
-            })
-        })
     });
+    const buttons = container.querySelectorAll("button[data-id]")
+    buttons.forEach(button => {
+        button.addEventListener("click", () => {
+
+            const id = parseInt(button.dataset.id)
+            addToCart(id)
+        })
+    })
 
 }   
 
