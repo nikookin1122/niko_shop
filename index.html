@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=K2D:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header_wrapper">
+                <div class="header_logo">Niko's shop</div>
+                <nav class="header_nav">
+                    <menu class="header_menu">
+                        <li class="header_list_item"><a href="/" class="header_link">Home</a></li>
+                        <li class="header_list_item"><a href="/product.html" class="header_link">Products</a></li>
+                        <li class="header_list_item"><a href="" class="header_link">About</a></li>
+                        <li class="header_list_item"><a href="" class="header_link">Contacts</a></li>
+                    </menu>
+                </nav>
+                <div class="header_searchbox">
+                    <input type="text" id="search">
+                    <label for="search" class="header_search_icon">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </label>
+                </div>
+                <div class="header_cart" id="header_cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <div class="header_cart_count" id="cart_count">0</div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero_wrapper">
+                    <div class="hero_content">
+                        <h1 class="hero_heading common_heading">Welcome to <span>Niko's`Shop</span></h1>
+                        <p class="hero_text common_text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae optio laborum voluptate!</p>
+                        <a href="" class="hero_link common_button">Go to shop</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+         <section class="shop">
+            <div class="container">
+                <div class="shop_wrap">
+                    <h2 class="shop_heading common_heading">Product list</h2>
+                    <div class="shop_list" id="shop_container">
+                        <h2 class="loading">Loading...</h2>
+                    </div>
+
+                </div>
+                <div class="cart" id="cart">
+                    <h2 class="cart_heading common_heading">Your cart</h2>
+                    <div class="cart_list" id="cart_list">
+
+                    </div>
+                    <p class="total">Total: $<span id="total">0.00</span></p>
+                    <button class="common_button" id="clear_btn">Clear Cart</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>

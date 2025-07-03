@@ -1,0 +1,277 @@
+:root {
+    --color-main: #e6d119;
+    --color-sec: #73690d;
+    --color-accent: #00c7c4;
+    --color-dark: #222222;
+    --color-light: #dddddd;
+
+    --font-xs: 12px;
+    --font-s: 16px;
+    --font-m: 20px;
+    --font-l: 24px;
+    --font-xl: 36px;
+
+    --radius: 4px;
+
+    --family-main: "Montserrat", sans-serif;
+    --family-sec: "Roboto", sans-serif;
+    --family-logo: "K2D", sans-serif;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+    font-family: var(--family-main);
+    color: var(--color-dark);
+    background: linear-gradient(
+        45deg,
+        var(--color-dark),
+        var(--color-light),
+        var(--color-dark)
+    );
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+ul, ol, menu {
+    list-style: none;
+}
+input, button {
+    outline:none;
+    border: none;
+    background: transparent;
+}
+
+.common_heading {
+    font-size: var(--font-xl);
+    color: var(--color-main);
+    letter-spacing: 1px;
+}
+.common_text {
+    font-size: var(--font-m);
+    line-height: 1.5;
+    font-weight: 500;
+    color: var(--color-dark);
+}
+.common_button {
+    background: #fff;
+    padding: 1em 3em;
+    border-radius: var(--radius);
+    font-size: var(--font-s);
+    font-weight: 500;
+    color: var(--color-accent);
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    max-width: 1200px;
+}
+.header {
+    position: sticky;
+    top: 0;
+    height: 5em;
+    width: 100%;
+    backdrop-filter: blur(20px);
+    background: #0008;
+    z-index: 99999;
+}
+.header_wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.header_logo {
+    color: var(--color-main);
+    font-size: var(--font-xl);
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.header_menu {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    color: var(--color-light);
+}
+.header_list_item {
+    font-weight: 600;
+}
+
+.header_searchbox {
+font-size: var(--font-s);
+position: relative;
+}
+.header_searchbox > input {
+border-bottom: 2px solid var(--color-light);
+padding: 0.5em;
+}
+.header_searchbox > input:focus ~ .header_search_icon {
+    left: calc(100% - 1.5em);
+    transition: 0.3s;
+}
+.header_search_icon {
+    position: absolute;
+    top: 50%;
+    left: 0.5em;
+    translate: 0 -50%;
+    cursor: text;
+    transition: 0.3s;
+    color: var(--color-light);
+}
+.header_cart {
+    font-size: var(--font-l);
+    color: var(--color-main);
+    position: relative;
+}
+.header_cart_count {
+    width: 1.5em;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    translate: 50% -50%;
+    font-size: var(--font-xs);
+    background: var(--color-sec);
+    color: #fff;
+    aspect-ratio: 1 / 1;
+}
+
+.hero {
+    height: calc(100vh - 5em);
+    background-blend-mode: darken;
+    background: #0005 url("https://i.pinimg.com/736x/65/ed/60/65ed6036e937c31d5be7872fbe673ce1.jpg") no-repeat center center / cover;
+}
+.hero_wrapper {
+height: 100%;
+display: flex;
+align-items: center;
+}
+.hero_content {
+max-width: 600px;
+display: flex;
+flex-direction: column;
+align-items: start;
+gap: 1em;
+}
+.hero_heading {
+    font-size: var(--font-xl);
+}
+.hero_text {
+color: var(--color-light);
+}
+
+
+.shop_wrap {
+    padding: 4em 0;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.shop_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1em;
+}
+.shop_card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.shop_img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    position: relative;
+    
+}
+
+.shop_img>img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.shop_title {
+     display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+    height: 4em;
+}
+.shop_price {
+    display: block;
+    font-weight: 900;
+    padding: 0.5em 2em;
+    border: 3px solid var(--color-dark);
+    border-radius: 20px;
+    background-color: var(--color-main);
+}
+
+.shop_description {
+    margin-bottom: 20px;
+    font-size: 0.8em;
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    overflow: hidden;
+    line-height: 1.5;
+    height: 4em;
+}
+
+.shop_button {
+    width: 100%;
+    padding: 1em 0;
+    background-color: var(--color-main);
+    border-radius: 5px;
+    text-transform: capitalize;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 700;
+}
+.loading {
+    color: var(--color-light);
+    font-size: var(--font-xl);
+    font-weight: 100;
+}
+.cart {
+    width: 80%;
+    max-width: fit-content;
+    background: var(--color-light);
+    display: none;
+    flex-direction: column;
+    gap: 2em;
+    padding: 3em;
+    border-radius: var(--radius);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+}
+.total {
+    font-size: var(--font-l);
+}
+.cart_heading {
+    color: var(--color-accent);
+}
